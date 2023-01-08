@@ -62,28 +62,28 @@ class RentalProperty:
 
 # ROI should return = cash on cash percentage
 
-rental_income = int(input("Enter rental income: "))
-amenities_income = int(input("Enter income from amenities (laundry/storage/misc): "))
-utilities = int(
+rental_income = float(input("Enter rental income: "))
+amenities_income = float(input("Enter income from amenities (laundry/storage/misc): "))
+utilities = float(
     input("Enter total costs for tenent (water/electric/sewer/garbage/gas): "))
-taxes = int(input("Enter taxes charged: "))
-insurance = int(input("Enter insurance charged: "))
-hoa = int(input("Enter HOA cost: "))
-lawn = int(input("Enter lawn cost: "))
-vacancy = int(input("Enter vacancy cost: "))
-repairs = int(input("Enter repairs cost: "))
-capex = int(input("Enter capex funds (replacements): "))
-property_management = int(input("Enter property management cost: "))
-mortgage = int(input("Enter monthly mortgage: "))
-down_payment = int(input("Enter down payment: "))
-closing_costs = int(input("Enter closing costs: "))
-rehab_budget = int(input("Enter rehab budget: "))
-misc = int(input("Enter misc/other: "))
+taxes = float(input("Enter taxes charged: "))
+insurance = float(input("Enter insurance charged: "))
+hoa = float(input("Enter HOA cost: "))
+lawn = float(input("Enter lawn cost: "))
+vacancy = float(input("Enter vacancy cost: "))
+repairs = float(input("Enter repairs cost: "))
+capex = float(input("Enter capex funds (replacements): "))
+property_management = float(input("Enter property management cost: "))
+mortgage = float(input("Enter monthly mortgage: "))
+down_payment = float(input("Enter down payment: "))
+closing_costs = float(input("Enter closing costs: "))
+rehab_budget =float(input("Enter rehab budget: "))
+misc = float(input("Enter misc/other: "))
 
 property = RentalProperty(mortgage, rental_income, amenities_income, taxes, insurance, utilities, hoa,
                           lawn, vacancy, repairs, capex, property_management, down_payment, closing_costs, rehab_budget, misc)
 roi = property.roi()
-roi_percent = int(roi * 100)
+roi_percent = float(roi * 100)
 
 
 print(f"Total income: {property.income()}")
